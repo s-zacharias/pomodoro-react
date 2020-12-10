@@ -1,0 +1,24 @@
+.app-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+.timer-display {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.adjustments {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+}
