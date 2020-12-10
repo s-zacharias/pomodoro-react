@@ -14,6 +14,8 @@ class App extends React.Component {
     timerId: null,
   };
 
+  // audio = new Audio('../../public/notification.mp3');
+
   onCountdownStartPause = () => {
     if (this.state.countdown === 'pause') {
       this.setState({
@@ -92,6 +94,7 @@ class App extends React.Component {
   sessionToggle = () => {
     if (this.state.timeRemaining === 0) {
       console.log('Times up');
+      //this.audio.play();
     } else if (this.state.timeRemaining === -1) {
       if (this.state.session === 'active') {
         this.setState({
@@ -110,26 +113,27 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-container">
-        pomodoro
-        <Timer
-          activeSession={this.state.activeSession}
-          breakSession={this.state.breakSession}
-          session={this.state.session}
-          timeRemaining={this.state.timeRemaining}
-        />
-        <Controls
-          countdown={this.state.countdown}
-          onCountdownStartStop={this.onCountdownStartPause}
-          onReset={this.onReset}
-        />
-        <SessionAdjust
-          activeSession={this.state.activeSession}
-          breakSession={this.state.breakSession}
-          onActiveIncrease={this.onActiveIncrease}
-          onActiveDecrease={this.onActiveDecrease}
-          onBreakIncrease={this.onBreakIncrease}
-          onBreakDecrease={this.onBreakDecrease}
-        />
+        <div className="functional-container">
+          <Timer
+            activeSession={this.state.activeSession}
+            breakSession={this.state.breakSession}
+            session={this.state.session}
+            timeRemaining={this.state.timeRemaining}
+          />
+          <Controls
+            countdown={this.state.countdown}
+            onCountdownStartStop={this.onCountdownStartPause}
+            onReset={this.onReset}
+          />
+          <SessionAdjust
+            activeSession={this.state.activeSession}
+            breakSession={this.state.breakSession}
+            onActiveIncrease={this.onActiveIncrease}
+            onActiveDecrease={this.onActiveDecrease}
+            onBreakIncrease={this.onBreakIncrease}
+            onBreakDecrease={this.onBreakDecrease}
+          />
+        </div>
       </div>
     );
   }

@@ -11,16 +11,24 @@ const SessionAdjust = ({
   return (
     <div className="adjustments">
       <div className="adjust active">
-        <h5>Active</h5>
-        <button onClick={onActiveDecrease}>-</button>
+        <h5 className="label-session">active</h5>
+        <button className="up-down-session button" onClick={onActiveDecrease}>
+          -
+        </button>
         {activeSession}
-        <button onClick={onActiveIncrease}>+</button>
+        <button className="up-down-session button" onClick={onActiveIncrease}>
+          +
+        </button>
       </div>
       <div className="adjust break">
-        <h5>Break</h5>
-        <button onClick={onBreakDecrease}>-</button>
+        <h5 className="label-session">break</h5>
+        <button className="up-down-session button" onClick={onBreakDecrease}>
+          -
+        </button>
         {breakSession}
-        <button onClick={onBreakIncrease}>+</button>
+        <button className="up-down-session button" onClick={onBreakIncrease}>
+          +
+        </button>
       </div>
     </div>
   );

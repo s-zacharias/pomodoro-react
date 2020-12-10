@@ -1,7 +1,23 @@
-.app-container {
+body {
+  background-color: #7ca1bb;
+  font-family: 'Courier New', Courier, monospace;
+}
+.header {
+  border-radius: 10%;
+  width: 60px;
+  background-color: #fffdd0;
+}
+.functional-container {
   display: flex;
   flex-flow: column wrap;
   align-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+  background-color: #fffdd0;
+  padding: 50px;
 }
 
 .timer-display {
@@ -13,12 +29,42 @@
 
 .controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .adjustments {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: row;
   align-content: center;
   align-items: center;
+  justify-content: space-between;
+}
+
+.label-session {
+  display: flex;
+  justify-content: center;
+}
+
+.up-down-session {
+  width: 25px;
+  height: 20px;
+  margin: 10px;
+}
+
+.control {
+  width: 60px;
+  height: 30px;
+}
+
+.button {
+  border-radius: 50%;
+  background-color: #507c9a;
+  border: none;
+  color: #fffdd0;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #cbe2f2;
+  color: #fffdd0;
 }
