@@ -45,16 +45,18 @@ class App extends React.Component {
     this.setState({
       activeSession: 25,
       breakSession: 5,
+      session: 'active',
+      timeRemaining: 1500,
     });
-    if (this.state.session === 'active') {
-      this.setState({
-        timeRemaining: 1500,
-      });
-    } else if (this.state.session === 'break') {
-      this.setState({
-        timeRemaining: 300,
-      });
-    }
+    // if (this.state.session === 'active') {
+    //   this.setState({
+    //     timeRemaining: 1500,
+    //   });
+    // } else if (this.state.session === 'break') {
+    //   this.setState({
+    //     timeRemaining: 300,
+    //   });
+    // }
     this.audioAlert.current.pause();
     this.audioAlert.current.currentTime = 0;
   };
